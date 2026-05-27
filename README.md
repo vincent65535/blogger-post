@@ -9,15 +9,9 @@ CLI tool to publish Markdown/HTML posts to Blogger via Google API.
 
 ## 安裝
 
-### 方式一：pip 安裝
-
-```bash
-pip install .
-```
-
 安裝後可直接使用 `blogger-post` 指令。
 
-### 方式二：直接執行
+### 直接執行
 
 ```bash
 pip install -r requirements.txt
@@ -37,6 +31,7 @@ python main.py ...
 
 ```bash
 # 從 Markdown 檔案發布
+blogger-post --file article.md
 blogger-post --title "文章標題" --file article.md --blog-id YOUR_BLOG_ID
 
 # 直接指定 HTML 內容
@@ -87,6 +82,7 @@ blogger_post/
 ├── blogger.py       # Blogger API 封裝
 ├── md_utils.py      # Markdown 轉 HTML (含 syntax highlight CSS)
 ├── pyproject.toml   # 專案設定與 entry point
+├── config.json      # BLOG ID 設定檔
 └── requirements.txt # pip 依賴
 ```
 
